@@ -1,0 +1,61 @@
+﻿    @model JDRC2237A3.Models.PlaylistEditTracksFormViewModel
+
+    @{
+        ViewBag.Title = "Edit playlist";
+    }
+
+    <h2>@ViewBag.Title <span class="p-3 mb-2 text-bg-info bg-opacity-25 text-dark">@Model.PlaylistName</span></h2>
+
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+    <div>
+        <h5>Select tracks, and click the "Save changes" button</h5>
+        <hr />
+        <div class="row mb-3">
+            <div class="col">
+                <input type="submit" value="Save Changes" class="btn btn-primary" />
+                @Html.ActionLink("Back to Details", "Details", new { id = Model.PlaylistId }) | @Html.ActionLink("Back to List", "Index")
+            </div>
+        </div>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.TrackId)
+
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <h5>All Tracks</h5>
+            @foreach (var item in Model.AllTracks)
+            {
+                <div class="form-check">
+                    @Html.CheckBoxFor(m => m.IsSelected, item.Value)
+                    <label class="form-check-label">@item.Text</label>
+                </div>
+            }
+        </div>
+        @*<div class="row mb-3">
+            @Html.Label("Album", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("AlbumId", Model.AlbumList, new { @size = 10, @class = "form-control" })
+            </div>
+        </div>*@
+        <div class="col-md-6">
+            <div class="card bg-light">
+                <div class="card-body">
+                    <h5 class="card-title">Now on Playlist <span class="badge rounded-pill bg-secondary text-white">@Html.DisplayFor(model => model.TracksCount)</span></h5>
+                    @foreach (var track in Model.CurrentTracks)
+                    {
+                        @track.NameShort<br />
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    }
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }

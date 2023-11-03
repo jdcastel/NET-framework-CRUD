@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="JDRC2237A3.Models.AlbumBaseViewModel" Collapsed="true">
+    <Position X="5.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\AlbumBaseViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JDRC2237A3.Models.ArtistBaseViewModel" Collapsed="true">
+    <Position X="7.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ArtistBaseViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JDRC2237A3.Models.MediaTypeBaseViewModel" Collapsed="true">
+    <Position X="5.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\MediaTypeBaseViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JDRC2237A3.Models.TrackBaseViewModel">
+    <Position X="3" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAACAAAAAAAAAAAQAgAAEAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Models\TrackBaseViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JDRC2237A3.Models.TrackWithDetailViewModel">
+    <Position X="3" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgABAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\TrackWithDetailViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

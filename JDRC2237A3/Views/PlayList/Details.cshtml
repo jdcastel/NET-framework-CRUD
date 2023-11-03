@@ -1,0 +1,44 @@
+﻿@model JDRC2237A3.Models.PlaylistBaseViewModel
+
+@{
+    ViewBag.Title = "Playlist Details";
+}
+
+<h2>@ViewBag.Title <span class="p-3 mb-2 bg-info bg-opacity-25 text-dark">@Model.Name</span></h2>
+
+<div>
+    <hr />
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.PlaylistId }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt class="col-sm-2">
+            Tracks on the Playlist
+        </dt>
+
+        <dd class="col-sm-10">
+            <span class="badge rounded-pill text-bg-secondary">@Html.DisplayFor(model => model.TracksCount)</span>
+            <br />
+            <span>
+                @foreach (var track in Model.Tracks)
+                {
+                    @track.Name<br />
+                }
+            </span>
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PlaylistId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

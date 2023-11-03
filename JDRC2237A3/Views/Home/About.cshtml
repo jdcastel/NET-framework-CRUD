@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<main aria-labelledby="title">
+
+    <h2 id="title">@ViewBag.Title</h2>
+
+    <div class="row mt-5">
+        <section class="col-md-6" aria-labelledby="aboutMe">
+            <h4 id="aboutMe">About me</h4>
+            <p>I am Juan David Rodriguez, I am currently studying WEB524 in the Fall 2023 semester. I am passionate about technology and software development focused on WEB applications.</p>
+        </section>
+        <section class="col-md-6" aria-labelledby="purposeofProject">
+            <h4 id="purposeofProject">What is the purpose of this project?</h4>
+            <p>@ViewBag.Message</p>
+        </section>
+    </div>
+</main>
